@@ -14,7 +14,7 @@ def home(request):
 class StudentSignUpView(CreateView):
     model = User
     form_class = StudentSignUpForm
-    template = 'signup.html'
+    template_name = 'signup.html'
 
     def get_context_data(self, **kwargs):
         kwargs['user-type'] = 'student'
@@ -29,7 +29,7 @@ class StudentSignUpView(CreateView):
 class TeacherSignUpView(CreateView):
     model = User
     form_class = TeacherSignUpForm
-    template = 'forms/signup.html'
+    template_name = 'forms/signup.html'
 
     def get_context_data(self, **kwargs):
         kwargs['user-type'] = 'teacher'

@@ -1,8 +1,7 @@
 from django import forms
-from .models import Student, Teacher
+from .models import Student, Teacher, User
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
-from django.contrib.auth.models import User
 
 
 class StudentSignUpForm(UserCreationForm):
